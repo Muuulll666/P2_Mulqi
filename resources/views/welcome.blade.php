@@ -110,33 +110,33 @@ Melalui surat ini, saya ingin..." required></textarea>
                                     <h1>Surat Lamaran Kerja</h1>
                                 </div>
 
-                                <!-- Alamat Pengirim (Kota dari input) -->
-                                <div class="sender-address">
+                                <!-- Alamat Pengirim (Kota dari input) - Tetap Rata Kanan -->
+                                <div class="sender-address text-right">
                                     <span id="prevKota"><span class="empty-placeholder">[Kota]</span></span>, 
                                     <span id="prevTanggal"><span class="empty-placeholder">[Tanggal]</span></span>
                                 </div>
 
                                 <!-- Subjek Surat -->
-                                <div class="letter-subject">
+                                <div class="letter-subject text-left">
                                     <strong>Hal: </strong><span id="prevSubjek"><span class="empty-placeholder">[Subjek Surat]</span></span>
                                 </div>
 
                                 <!-- Alamat Penerima -->
-                                <div class="recipient-address">
+                                <div class="recipient-address text-left">
                                     <div id="prevAlamatPenerima">
                                         <span class="empty-placeholder">Kepada:<br>HRD Manager<br>Nama Perusahaan<br>Jl. Alamat Perusahaan No. 123</span>
                                     </div>
                                 </div>
 
                                 <!-- Salam Pembuka -->
-                                <div class="salutation">
+                                <div class="salutation text-left">
                                     <span id="prevPembuka">
                                         <span class="empty-placeholder">Kepada Yth.<br>Dengan hormat,<br><br>Melalui surat ini, saya ingin...</span>
                                     </span>
                                 </div>
 
                                 <!-- Isi Surat -->
-                                <div class="letter-body">
+                                <div class="letter-body text-left">
                                     <!-- Paragraf Isi -->
                                     <div class="paragraph" id="prevIsi">
                                         <span class="empty-placeholder">[Paragraf isi surat akan muncul di sini]</span>
@@ -149,12 +149,12 @@ Melalui surat ini, saya ingin..." required></textarea>
                                 </div>
 
                                 <!-- Salam Penutup -->
-                                <div class="signature">
+                                <div class="signature text-left">
                                     Hormat saya,
                                 </div>
 
                                 <!-- Tanda Tangan -->
-                                <div class="signature">
+                                <div class="signature text-left">
                                     <div id="prevPengirim">
                                         <span class="empty-placeholder">[Nama Pengirim]</span>
                                     </div>
@@ -220,27 +220,31 @@ Melalui surat ini, saya ingin..." required></textarea>
     .letter-subject {
         margin-bottom: 2rem;
         font-size: 11pt;
+        text-align: left;
     }
 
     .recipient-address {
         margin-bottom: 2rem;
         font-size: 11pt;
+        text-align: left;
     }
 
     .salutation {
         margin-bottom: 1rem;
         font-size: 11pt;
+        text-align: left;
     }
 
     .letter-body {
         font-size: 11pt;
-        text-align: justify;
+        text-align: left;
         margin-bottom: 2rem;
     }
 
     .paragraph {
         margin-bottom: 1rem;
         text-indent: 1.5rem;
+        text-align: left;
     }
 
     .closing {
@@ -249,7 +253,7 @@ Melalui surat ini, saya ingin..." required></textarea>
     }
 
     .signature {
-        text-align: right;
+        text-align: left;
         margin-top: 4rem;
     }
 
@@ -261,6 +265,23 @@ Melalui surat ini, saya ingin..." required></textarea>
     .empty-placeholder {
         color: #ccc;
         font-style: italic;
+    }
+
+    /* Class untuk align text */
+    .text-left {
+        text-align: left !important;
+    }
+    
+    .text-right {
+        text-align: right !important;
+    }
+    
+    .text-center {
+        text-align: center !important;
+    }
+    
+    .text-justify {
+        text-align: justify !important;
     }
 
     /* Toast Notification */
@@ -496,13 +517,13 @@ Melalui surat ini, saya ingin..." required></textarea>
                                 margin-bottom: 1.5rem;
                             }
                             .sender-address { text-align: right; margin-bottom: 2rem; font-size: 11pt; }
-                            .letter-subject { margin-bottom: 2rem; font-size: 11pt; }
-                            .recipient-address { margin-bottom: 2rem; font-size: 11pt; }
-                            .salutation { margin-bottom: 1rem; font-size: 11pt; }
-                            .letter-body { font-size: 11pt; text-align: justify; margin-bottom: 2rem; }
-                            .paragraph { margin-bottom: 1rem; text-indent: 1.5rem; }
-                            .closing { margin-top: 2rem; margin-bottom: 3rem; }
-                            .signature { text-align: right; margin-top: 4rem; }
+                            .letter-subject { margin-bottom: 2rem; font-size: 11pt; text-align: left; }
+                            .recipient-address { margin-bottom: 2rem; font-size: 11pt; text-align: left; }
+                            .salutation { margin-bottom: 1rem; font-size: 11pt; text-align: left; }
+                            .letter-body { font-size: 11pt; text-align: left; margin-bottom: 2rem; }
+                            .paragraph { margin-bottom: 1rem; text-indent: 1.5rem; text-align: left; }
+                            .closing { margin-top: 2rem; margin-bottom: 3rem; text-align: left; }
+                            .signature { text-align: left; margin-top: 4rem; }
                             @media print {
                                 body { padding: 0; margin: 0; }
                                 @page { margin: 20mm; }
