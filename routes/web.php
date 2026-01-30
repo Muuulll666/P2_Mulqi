@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 // ROOT tetap ke login (untuk first time user)
 Route::get('/', function () {
-    return view('layout.form');
+    return view('welcome');
 });
 
 // Tapi buat akses cepat ke dashboard (buat development)

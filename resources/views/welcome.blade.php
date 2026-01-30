@@ -1,4 +1,4 @@
-@extends('layout.form')
+@extends('layouts.form')
 
 @section('title', 'Form Lamaran Kerja')
 
